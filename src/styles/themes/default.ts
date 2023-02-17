@@ -6,9 +6,15 @@ export const defaultTheme ={
   'pp-700': '#9400D3',
   'pp-900': '#4B0082',
 
-  'blue-300': '#00FFFF',
-  'blue-500': '#1E90FF',
-  'blue-700': '#4682B4',
+  'blue-100': '#87CEFA',
+  'blue-300': '#1E90FF',
+  'blue-500': '#0000CD',
+  'blue-700': '#191970',
+
+  'gray-100': '#E1E1E6',
+  'gray-300': '#C4C4CC',
+  'gray-500': '#7C7C8A',
+  'gray-700': '#29292E',
 
   'red-300': '#F75A68',
   'red-500': '#AB222E',

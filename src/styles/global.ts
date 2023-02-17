@@ -13,8 +13,8 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: ${props => props.theme['pp-900']};
-    color: ${props => props.theme['blue-700']};
+    background-color: ${props => props.theme['pp-500']};
+    color: ${props => props.theme['blue-100']};
     -webkit-font-smoothing: antialiased;
   }
 

@@ -6,14 +6,12 @@ export const GameInfoContainer = styled.div`
   margin: 4rem auto 0;
   padding: 2rem 1.5rem;
   background-color: ${props => props.theme["pp-700"]};
-
+  
   border-radius: 10px;
 
   h2 {
     margin-bottom: 1rem;
   }
-
-  display: block;
 `
 
 export const GameInfoForm = styled.form`
