@@ -66,6 +66,206 @@ export function PlayersChart() {
 
           <ActionIcons><button><Trash size={24} weight="regular"/></button></ActionIcons>
         </tr>
+        <tr>
+          <td>Michael Jordan</td>
+          <td>23</td>
+          <td>
+            <StatsController>
+              <button>
+                <ArrowCircleDown size={24} color="#a40a30" weight="duotone" />
+              </button>
+              <span>0</span>
+              <button>
+                <ArrowCircleUp size={24} color="#084f10" weight="duotone" />
+              </button>
+            </StatsController>
+          </td>
+          <td>
+            <StatsController>
+              <button>
+                <ArrowCircleDown size={24} color="#a40a30" weight="duotone" />
+              </button>
+              <span>0</span>
+              <button>
+                <ArrowCircleUp size={24} color="#084f10" weight="duotone" />
+              </button>
+            </StatsController>
+          </td>
+          <td>
+            <StatsController>
+              <button>
+                <ArrowCircleDown size={24} color="#a40a30" weight="duotone" />
+              </button>
+              <span>0</span>
+              <button>
+                <ArrowCircleUp size={24} color="#084f10" weight="duotone" />
+              </button>
+            </StatsController>
+          </td>
+          <td>
+            <StatsController>
+              <button>
+                <ArrowCircleDown size={24} color="#a40a30" weight="duotone" />
+              </button>
+              <span>0</span>
+              <button>
+                <ArrowCircleUp size={24} color="#084f10" weight="duotone" />
+              </button>
+            </StatsController>
+          </td>
+
+          <ActionIcons><button><Trash size={24} weight="regular"/></button></ActionIcons>
+        </tr>
+        <tr>
+          <td>Michael Jordan</td>
+          <td>23</td>
+          <td>
+            <StatsController>
+              <button>
+                <ArrowCircleDown size={24} color="#a40a30" weight="duotone" />
+              </button>
+              <span>0</span>
+              <button>
+                <ArrowCircleUp size={24} color="#084f10" weight="duotone" />
+              </button>
+            </StatsController>
+          </td>
+          <td>
+            <StatsController>
+              <button>
+                <ArrowCircleDown size={24} color="#a40a30" weight="duotone" />
+              </button>
+              <span>0</span>
+              <button>
+                <ArrowCircleUp size={24} color="#084f10" weight="duotone" />
+              </button>
+            </StatsController>
+          </td>
+          <td>
+            <StatsController>
+              <button>
+                <ArrowCircleDown size={24} color="#a40a30" weight="duotone" />
+              </button>
+              <span>0</span>
+              <button>
+                <ArrowCircleUp size={24} color="#084f10" weight="duotone" />
+              </button>
+            </StatsController>
+          </td>
+          <td>
+            <StatsController>
+              <button>
+                <ArrowCircleDown size={24} color="#a40a30" weight="duotone" />
+              </button>
+              <span>0</span>
+              <button>
+                <ArrowCircleUp size={24} color="#084f10" weight="duotone" />
+              </button>
+            </StatsController>
+          </td>
+
+          <ActionIcons><button><Trash size={24} weight="regular"/></button></ActionIcons>
+        </tr>
+        <tr>
+          <td>Michael Jordan</td>
+          <td>23</td>
+          <td>
+            <StatsController>
+              <button>
+                <ArrowCircleDown size={24} color="#a40a30" weight="duotone" />
+              </button>
+              <span>0</span>
+              <button>
+                <ArrowCircleUp size={24} color="#084f10" weight="duotone" />
+              </button>
+            </StatsController>
+          </td>
+          <td>
+            <StatsController>
+              <button>
+                <ArrowCircleDown size={24} color="#a40a30" weight="duotone" />
+              </button>
+              <span>0</span>
+              <button>
+                <ArrowCircleUp size={24} color="#084f10" weight="duotone" />
+              </button>
+            </StatsController>
+          </td>
+          <td>
+            <StatsController>
+              <button>
+                <ArrowCircleDown size={24} color="#a40a30" weight="duotone" />
+              </button>
+              <span>0</span>
+              <button>
+                <ArrowCircleUp size={24} color="#084f10" weight="duotone" />
+              </button>
+            </StatsController>
+          </td>
+          <td>
+            <StatsController>
+              <button>
+                <ArrowCircleDown size={24} color="#a40a30" weight="duotone" />
+              </button>
+              <span>0</span>
+              <button>
+                <ArrowCircleUp size={24} color="#084f10" weight="duotone" />
+              </button>
+            </StatsController>
+          </td>
+
+          <ActionIcons><button><Trash size={24} weight="regular"/></button></ActionIcons>
+        </tr>
+        <tr>
+          <td>Michael Jordan</td>
+          <td>23</td>
+          <td>
+            <StatsController>
+              <button>
+                <ArrowCircleDown size={24} color="#a40a30" weight="duotone" />
+              </button>
+              <span>0</span>
+              <button>
+                <ArrowCircleUp size={24} color="#084f10" weight="duotone" />
+              </button>
+            </StatsController>
+          </td>
+          <td>
+            <StatsController>
+              <button>
+                <ArrowCircleDown size={24} color="#a40a30" weight="duotone" />
+              </button>
+              <span>0</span>
+              <button>
+                <ArrowCircleUp size={24} color="#084f10" weight="duotone" />
+              </button>
+            </StatsController>
+          </td>
+          <td>
+            <StatsController>
+              <button>
+                <ArrowCircleDown size={24} color="#a40a30" weight="duotone" />
+              </button>
+              <span>0</span>
+              <button>
+                <ArrowCircleUp size={24} color="#084f10" weight="duotone" />
+              </button>
+            </StatsController>
+          </td>
+          <td>
+            <StatsController>
+              <button>
+                <ArrowCircleDown size={24} color="#a40a30" weight="duotone" />
+              </button>
+              <span>0</span>
+              <button>
+                <ArrowCircleUp size={24} color="#084f10" weight="duotone" />
+              </button>
+            </StatsController>
+          </td>
+
+          <ActionIcons><button><Trash size={24} weight="regular"/></button></ActionIcons>
+        </tr>
       </tbody>
 
     </PlayersChartContainer>

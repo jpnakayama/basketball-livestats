@@ -1,19 +1,32 @@
-import { useState } from "react";
-import { GameInfoContainer, GameInfoForm } from "./styles";
+import { CloseButton, Content, Overlay } from "./styles";
+import * as Dialog from '@radix-ui/react-dialog'
+import { X } from 'phosphor-react'
 
-export function GameInfoTab() {
+
+export function GameInfoModal() {
   
   return (
-    <GameInfoContainer>
-      <h2>INFORMAÇÕES DA PARTIDA</h2>
-      <GameInfoForm action="">
-        <input type="text" placeholder="Competição" />
-        <input type="text" placeholder="Time casa" />
-        <input type="text" placeholder="Time visitante" />
-        <input type="text" placeholder="Local" />
-        <input type="text" placeholder="Categoria" />
-        <button>Cadastrar</button>
-      </GameInfoForm>     
-    </GameInfoContainer>
+    <Dialog.Portal>
+      <Overlay>
+        <Content>
+          <Dialog.Title>INFORMAÇÕES DA PARTIDA</Dialog.Title>
+
+          <CloseButton>
+            <X size={24} />
+          </CloseButton>
+
+          <form action="">
+            <input type="text" placeholder="Competição" />
+            <input type="text" placeholder="Time casa" />
+            <input type="text" placeholder="Time visitante" />
+            <input type="text" placeholder="Local" />
+            <input type="text" placeholder="Categoria" />
+            <button>Cadastrar</button>
+          </form>     
+
+        </Content>
+      </Overlay>
+
+    </Dialog.Portal>
   )
 }
