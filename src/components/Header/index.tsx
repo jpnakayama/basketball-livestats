@@ -12,14 +12,14 @@ export function Header() {
         <div>
           
           <Dialog.Root>
-            <Dialog.Trigger>
+            <Dialog.Trigger asChild>
               <AddInfoButton><PlusCircle size={20} weight="thin" /> Game Info</AddInfoButton>
             </Dialog.Trigger>
             <GameInfoModal />
           </Dialog.Root>
 
           <Dialog.Root>
-            <Dialog.Trigger>
+            <Dialog.Trigger asChild>
             <AddInfoButton><UserCirclePlus size={20} weight="thin" /> Player</AddInfoButton>
             </Dialog.Trigger>
             <AddPlayerModal />
