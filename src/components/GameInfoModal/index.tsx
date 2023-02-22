@@ -1,4 +1,4 @@
-import { CloseButton, Content, Overlay } from "./styles";
+import { CloseButton, Content, Overlay, SubmitButton } from "./styles";
 import * as Dialog from '@radix-ui/react-dialog'
 import { X } from 'phosphor-react'
 import { useContext, useState } from "react";
@@ -11,22 +11,23 @@ export function GameInfoModal() {
   const { setFormValues } = useContext(FormContext)
 
   // Para capturar os dados dos inputs serão criadas variáveis de estado para cada valor  
-  const [timeMandante, setTimeMandante] = useState<string>('')
-  const [timeVisitante, setTimeVisitante] = useState<string>('')
-  const [competicao, setCompeticao] = useState<string>('')
-  const [categoria, setCategoria] = useState<string>('')
-  const [local, setLocal] = useState<string>('')
+  const [homeTeam, setHomeTeam] = useState<string>('')
+  const [awayTeam, setAwayTeam] = useState<string>('')
+  const [league, setLeague] = useState<string>('')
+  const [grade, setGrade] = useState<string>('')
+  const [venue, setVenue] = useState<string>('')
   const [gameDate, setGameDate] = useState<string>('')
   
-  const dataAtual = Date.now()
-  const dataFormatada = format(dataAtual, "P", {
-    locale: ptBR
-  })
-  
   function handleSubmit() {
+    const dataAtual = Date.now()
+    const dataFormatada = format(dataAtual, "P", {
+      locale: ptBR
+    })
+
     setGameDate(dataFormatada)
 
-    setFormValues({ timeMandante, timeVisitante, competicao, categoria, local, gameDate })    
+    setFormValues({ homeTeam, awayTeam, league, grade, venue, gameDate })
+
   };
 
   return (
@@ -43,34 +44,34 @@ export function GameInfoModal() {
             <input 
               type="text" 
               placeholder="Competição"
-              name="competicao"
-              onChange={(e) => setCompeticao(e.target.value)}
+              name="league"
+              onChange={(e) => setLeague(e.target.value)}
             />
             <input 
               type="text" 
               placeholder="Time casa"
-              name="timeMandante"
-              onChange={(e) => setTimeMandante(e.target.value)}
+              name="homeTeam"
+              onChange={(e) => setHomeTeam(e.target.value)}
             />
             <input 
               type="text" 
               placeholder="Time visitante"
-              name="timeVisitante"
-              onChange={(e) => setTimeVisitante(e.target.value)}
+              name="awayTeam"
+              onChange={(e) => setAwayTeam(e.target.value)}
             />            
             <input 
               type="text" 
               placeholder="Local"
-              name="local"
-              onChange={(e) => setLocal(e.target.value)}
+              name="venue"
+              onChange={(e) => setVenue(e.target.value)}
             />
             <input 
               type="text" 
               placeholder="Categoria"
-              name="categoria"
-              onChange={(e) => setCategoria(e.target.value)}
+              name="grade"
+              onChange={(e) => setGrade(e.target.value)}
             />
-            <button type="button" onClick={handleSubmit}>Cadastrar</button>
+            <SubmitButton type="button" onClick={handleSubmit}>Cadastrar</SubmitButton>
           </form>     
 
         </Content>

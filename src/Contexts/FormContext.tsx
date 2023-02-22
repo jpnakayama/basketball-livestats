@@ -2,11 +2,11 @@ import React, { ReactNode, useState } from 'react';
 
 // Tipificação dos dados passados por formulário
 type FormValues = {
-  competicao: string;
-  timeMandante: string;
-  timeVisitante: string;
-  local: string;
-  categoria: string;
+  league: string;
+  homeTeam: string;
+  awayTeam: string;
+  venue: string;
+  grade: string;
   gameDate: string
 }
 
@@ -25,11 +25,11 @@ A constante que irá conter os valores iniciais das variáveis pode ser criada d
 
 export const FormContext = React.createContext<FormContextType>({
   formValues: {
-    competicao: '',
-    timeMandante: '',
-    timeVisitante: '',
-    local: '',
-    categoria: '',
+    league: '',
+    homeTeam: '',
+    awayTeam: '',
+    venue: '',
+    grade: '',
     gameDate: ''
   },
   setFormValues: () => {},
@@ -38,14 +38,14 @@ export const FormContext = React.createContext<FormContextType>({
 Nesse caso achei melhor criar separado para ficar as ações ficarem mais claras no provider
 */
 
-// Definindo os valores iniciais das variáveis
+// Definindo os valores iniciais das variáveis e a alteração com o setFormValues
 const DEFAULT_VALUE = {
   formValues: {
-    competicao: '',
-    timeMandante: '',
-    timeVisitante: '',
-    local: '',
-    categoria: '',
+    league: '',
+    homeTeam: '',
+    awayTeam: '',
+    venue: '',
+    grade: '',
     gameDate: ''
   },
   setFormValues: () => {},

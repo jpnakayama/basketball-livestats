@@ -42,25 +42,6 @@ export const Content = styled(Dialog.Content)`
       }
 
     }
-    
-    button {
-      max-width: fit-content;
-
-      padding: 1rem;
-      background: ${(props) => props.theme['blue-300']};
-      color: ${props => props.theme["gray-100"]};
-      border: none;
-      font-weight: bold;
-      border-radius: 6px;
-      cursor: pointer;
-      margin-top: 1rem;
-
-      &:hover {
-        background: ${(props) => props.theme['blue-500']};
-        color: ${props => props.theme["gray-100"]};
-        transition: background-color 0.2s, color 0.2s;
-      }
-    }
   }
 `
 export const CloseButton = styled(Dialog.Close)`
@@ -73,4 +54,23 @@ export const CloseButton = styled(Dialog.Close)`
   line-height: 0;
   cursor: pointer;
   color: ${(props) => props.theme['gray-500']};
+`
+
+export const SubmitButton = styled(Dialog.Close)`
+  max-width: fit-content;
+
+  padding: 1rem;
+  background: ${(props) => props.theme['blue-300']};
+  color: ${props => props.theme["gray-100"]};
+  border: none;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 1rem;
+
+  &:hover {
+    background: ${(props) => props.theme['blue-500']};
+    color: ${props => props.theme["gray-100"]};
+    transition: background-color 0.2s, color 0.2s;
+  }
 `

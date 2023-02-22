@@ -12,7 +12,8 @@ export const StatsPage = styled.main`
 `
 
 export const GameInfoDisplay = styled.div`
-    h2 {
+   
+  h2 {
     text-align: center;
     margin-bottom: 1rem;
     font-size: 3rem;

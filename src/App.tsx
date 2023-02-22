@@ -1,5 +1,6 @@
 import { ThemeProvider } from "styled-components";
 import { FormProvider } from "./Contexts/FormContext";
+import { PlayersAttributesProvider } from "./Contexts/PlayersContext";
 import { Stats } from "./pages/Stats";
 import { GlobalStyle } from "./styles/global";
 import { defaultTheme } from "./styles/themes/default";
@@ -11,7 +12,9 @@ function App() {
       <GlobalStyle />
 
       <FormProvider>
-        <Stats />
+      <PlayersAttributesProvider>
+        <Stats />      
+      </PlayersAttributesProvider>  
       </FormProvider>
     </ThemeProvider>
   )
