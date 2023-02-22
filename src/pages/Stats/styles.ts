@@ -23,7 +23,7 @@ export const GameInfoDisplay = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 80%;
+    width: 60%;
 
     margin: 0 auto;
 

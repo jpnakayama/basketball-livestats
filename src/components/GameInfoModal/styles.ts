@@ -60,6 +60,43 @@ export const DateCheckBox = styled.fieldset`
   display: flex;
   align-items: center;
   gap: 1rem;
+  border: none; 
+
+  input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: ${(props) => props.theme['pp-500']};
+    width: 1.15em;
+    height: 1.15em;
+    border: none;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+  }
+    
+  input[type="checkbox"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em ${(props) => props.theme['pp-500']};
+    transform-origin: bottom left;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  }
+
+  input[type="checkbox"]:checked::before {
+    transform: scale(1);
+  }
+  
+  label {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+  }
 `
 
 export const SubmitButton = styled(Dialog.Close)`
