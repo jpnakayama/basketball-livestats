@@ -1,5 +1,5 @@
 import { AddInfoButton, HeaderContainer, HeaderContent } from "./styles";
-import { UserCirclePlus, PlusCircle } from 'phosphor-react'
+import { UserCirclePlus, PlusCircle, Record } from 'phosphor-react'
 import * as Dialog from "@radix-ui/react-dialog";
 import { GameInfoModal } from "../GameInfoModal";
 import { AddPlayerModal } from "../AddPlayerModal";
@@ -8,7 +8,11 @@ export function Header() {
   return (
     <HeaderContainer>
       <HeaderContent>
-        <h1><span>LIVE</span>STATS</h1>
+        <h1>
+          <span>LIVE</span>
+          STATS
+        </h1>        
+        
         <div>
           
           <Dialog.Root>

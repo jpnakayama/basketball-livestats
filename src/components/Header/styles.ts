@@ -17,7 +17,7 @@ export const HeaderContent = styled.div`
   
   color: white;
   
-  span {
+  span {    
     color: red;
     border: 4px solid red;
     padding: 0.2rem;
