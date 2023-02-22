@@ -56,6 +56,12 @@ export const CloseButton = styled(Dialog.Close)`
   color: ${(props) => props.theme['gray-500']};
 `
 
+export const DateCheckBox = styled.fieldset`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+`
+
 export const SubmitButton = styled(Dialog.Close)`
   max-width: fit-content;
 

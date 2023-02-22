@@ -43,13 +43,14 @@ export const StatsController = styled.div`
   button {
     cursor: pointer;
     background-color: transparent;
-    border: none
+    border: none;    
   }
 
   span {
     font-size: 1.2rem;
   }
-  
+
+
 `
 
 export const ActionIcons = styled.td`

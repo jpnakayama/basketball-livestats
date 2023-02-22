@@ -1,4 +1,4 @@
-import { CloseButton, Content, Overlay, SubmitButton } from "./styles";
+import { CloseButton, Content, DateCheckBox, Overlay, SubmitButton } from "./styles";
 import * as Dialog from '@radix-ui/react-dialog'
 import { X } from 'phosphor-react'
 import { useContext, useState } from "react";
@@ -18,16 +18,14 @@ export function GameInfoModal() {
   const [venue, setVenue] = useState<string>('')
   const [gameDate, setGameDate] = useState<string>('')
   
+  const dataAtual = Date.now()
+  const dataFormatada = format(dataAtual, "P", {
+    locale: ptBR
+  })
+
   function handleSubmit() {
-    const dataAtual = Date.now()
-    const dataFormatada = format(dataAtual, "P", {
-      locale: ptBR
-    })
-
-    setGameDate(dataFormatada)
-
-    setFormValues({ homeTeam, awayTeam, league, grade, venue, gameDate })
-
+    
+     setFormValues({ homeTeam, awayTeam, league, grade, venue, gameDate })
   };
 
   return (
@@ -46,31 +44,41 @@ export function GameInfoModal() {
               placeholder="Competição"
               name="league"
               onChange={(e) => setLeague(e.target.value)}
+              required
             />
             <input 
               type="text" 
               placeholder="Time casa"
               name="homeTeam"
               onChange={(e) => setHomeTeam(e.target.value)}
+              required
             />
             <input 
               type="text" 
               placeholder="Time visitante"
               name="awayTeam"
               onChange={(e) => setAwayTeam(e.target.value)}
+              required
             />            
             <input 
               type="text" 
               placeholder="Local"
               name="venue"
               onChange={(e) => setVenue(e.target.value)}
+              required
             />
             <input 
               type="text" 
               placeholder="Categoria"
               name="grade"
               onChange={(e) => setGrade(e.target.value)}
+              required
             />
+            <DateCheckBox>
+              <input type="checkbox" onChange={() => setGameDate(dataFormatada)} />
+              <label>Incluir data?</label>
+            </DateCheckBox>
+
             <SubmitButton type="button" onClick={handleSubmit}>Cadastrar</SubmitButton>
           </form>     
 

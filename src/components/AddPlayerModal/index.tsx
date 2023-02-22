@@ -16,7 +16,9 @@ export function AddPlayerModal() {
   const [assists, setAssists] = useState<number>(0)
   const [blocks, setBlocks] = useState<number>(0)
 
-  function handleSubmitPlayer() {
+  function handleSubmitPlayer(e: any) {
+    e.preventDefault()
+    
     setNewPlayer(state => [...state, { name, number, points, rebounds, assists, blocks }])
   }
 
@@ -24,13 +26,13 @@ export function AddPlayerModal() {
     <Dialog.Portal>
       <Overlay>
         <Content>
-          <Dialog.Title>Incluir jogador</Dialog.Title>
+          <Dialog.Title>INCLUIR JOGADOR</Dialog.Title>
 
           <CloseButton>
             <X size={24} />
           </CloseButton>
 
-          <form>
+          <form onSubmit={handleSubmitPlayer}>
             <input 
               type="text" 
               placeholder="Nome"
@@ -45,7 +47,7 @@ export function AddPlayerModal() {
               onChange={(e) => setNumber(e.target.value)}
               required
             />
-            <button type="button" onClick={handleSubmitPlayer}>Incluir</button>
+            <button type="submit">Incluir</button>
           </form>     
 
         </Content>
