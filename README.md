@@ -47,6 +47,11 @@ O Projeto foi desenvolvido utilizando as seguintes tecnologias
 
 ---
 
+## 💻 Acesso ao projeto
+
+[Basketball Live Stats](https://basketball-livestats.vercel.app/)
+
+---
 ## 💾 Como baixar o projeto
 
 ### Web
@@ -61,6 +66,4 @@ $ npm install
 # Iniciar o Projeto
 $ npm run dev
 ```
-### <a href="https://basketball-livestats.vercel.app/">Link do Projeto</a>
 
----
