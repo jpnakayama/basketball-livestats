@@ -11,9 +11,13 @@ export function AddPlayerModal() {
 
   const [name, setName] = useState<string>('')
   const [number, setNumber] = useState<string>('')
+  const [points, setPoints] = useState<number>(0)
+  const [rebounds, setRebounds] = useState<number>(0)
+  const [assists, setAssists] = useState<number>(0)
+  const [blocks, setBlocks] = useState<number>(0)
 
   function handleSubmitPlayer() {
-    setNewPlayer(state => [...state, { name, number }])
+    setNewPlayer(state => [...state, { name, number, points, rebounds, assists, blocks }])
   }
 
   return (
@@ -26,18 +30,20 @@ export function AddPlayerModal() {
             <X size={24} />
           </CloseButton>
 
-          <form action="">
+          <form>
             <input 
               type="text" 
               placeholder="Nome"
               name="name"
               onChange={(e) => setName(e.target.value)}
-            />
+              required
+              />
             <input 
               type="number" 
               placeholder="Número"
               name="number"
               onChange={(e) => setNumber(e.target.value)}
+              required
             />
             <button type="button" onClick={handleSubmitPlayer}>Incluir</button>
           </form>     

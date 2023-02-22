@@ -1,17 +1,17 @@
 import { ActionIcons, PlayersChartContainer, StatsController } from "./styles";
-import { Trash, ArrowCircleDown, ArrowCircleUp, CaretDoubleDown, CaretDoubleUp, CaretCircleDown, CaretCircleUp, ArrowSquareDown, ArrowSquareUp } from 'phosphor-react';
-import { useState, useContext } from "react";
+import { Trash, CaretCircleDown, CaretCircleUp } from 'phosphor-react';
+import { useContext, useState } from "react";
 import { PlayersAttributesContext } from "../../Contexts/PlayersContext";
 
 export function PlayersChart() {
   
-  const { newPlayer } = useContext(PlayersAttributesContext)
-  
-  let [pts, setPts] = useState<number>(0)
-  let [reb, setReb] = useState<number>(0)
-  let [ast, setAst] = useState<number>(0)
-  let [blk, setBlk] = useState<number>(0)
-  
+  const { newPlayer, deletePlayer } = useContext(PlayersAttributesContext)
+
+  const [points, setPoints] = useState<number>(0)
+  const [rebounds, setRebounds] = useState<number>(0)
+  const [assists, setAssists] = useState<number>(0)
+  const [blocks, setBlocks] = useState<number>(0)
+
   return (
     <>
       {newPlayer.length > 0 && (
@@ -36,51 +36,51 @@ export function PlayersChart() {
                     <td>{player.number}</td>
                     <td>
                       <StatsController>
-                        <button onClick={() => {setPts(pts--)}}>
+                        <button onClick={() => setPoints(player.points--)}>
                           <CaretCircleDown size={24} color="#f50a0a" />
                         </button>
-                        <span>{pts}</span>
-                        <button onClick={() => {setPts(pts++)}}>
+                        <span>{player.points}</span>
+                        <button onClick={() => setPoints(player.points++)}>
                           <CaretCircleUp size={24} color="#3fc641"  />
                         </button>
                       </StatsController>
                     </td>
                     <td>
                       <StatsController>
-                        <button onClick={() => {setReb(reb--)}}>
+                        <button onClick={() => setRebounds(player.rebounds--)}>
                         <CaretCircleDown size={24} color="#f50a0a" />
                         </button>
-                        <span>{reb}</span>
-                        <button onClick={() => {setReb(reb++)}}>
+                        <span>{player.rebounds}</span>
+                        <button onClick={() => setRebounds(player.rebounds++)}>
                           <CaretCircleUp size={24} color="#3fc641" />
                         </button>
                       </StatsController>
                     </td>
                     <td>
                       <StatsController>
-                        <button onClick={() => {setAst(ast--)}}>
+                        <button onClick={() => setAssists(player.assists--)}>
                           <CaretCircleDown size={24} color="#f50a0a"/>
                         </button>
-                        <span>{ast}</span>
-                        <button onClick={() => {setAst(ast++)}}>
+                        <span>{player.assists}</span>
+                        <button onClick={() => setAssists(player.assists++)}>
                           <CaretCircleUp size={24} color="#3fc641"  />
                         </button>
                       </StatsController>
                     </td>
                     <td>
                       <StatsController>
-                        <button onClick={() => {setBlk(blk--)}}>
+                        <button onClick={() => setBlocks(player.blocks--)}>
                           <CaretCircleDown size={24} color="#f50a0a" />
                         </button>
-                        <span>{blk}</span>
-                        <button onClick={() => {setBlk(blk++)}}>
+                        <span>{player.blocks}</span>
+                        <button onClick={() => setBlocks(player.blocks++)}>
                           <CaretCircleUp size={24} color="#3fc641"  />
                         </button>
                       </StatsController>
                     </td>
 
       
-                    <ActionIcons><button><Trash size={24} weight="regular"/></button></ActionIcons>
+                    <ActionIcons><button onClick={() => deletePlayer(player.number)}><Trash size={24} weight="regular"/></button></ActionIcons>
                   </tr>
       
                 )
